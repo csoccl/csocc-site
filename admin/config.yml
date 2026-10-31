@@ -1,0 +1,51 @@
+backend:
+  name: git-gateway
+  branch: main
+  accept_roles:
+    - admin
+    - editor
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site"
+    label: "网站内容"
+    files:
+      - name: "content"
+        label: "网站内容"
+        file: "content.json"
+        fields:
+          - label: "首屏"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "大标题", name: "title", widget: "string"}
+              - {label: "副标题", name: "subtitle", widget: "text"}
+              - {label: "下载提示文字", name: "hint", widget: "string"}
+          - label: "关于社区"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "第一段", name: "p1", widget: "text"}
+              - {label: "第二段", name: "p2", widget: "text"}
+          - label: "更新日志"
+            name: "updates"
+            widget: "list"
+            fields:
+              - {label: "时间", name: "date", widget: "string"}
+              - {label: "标题", name: "title", widget: "string"}
+              - {label: "标签", name: "tag", widget: "string"}
+              - {label: "内容", name: "text", widget: "text"}
+          - label: "宣传视频"
+            name: "video"
+            widget: "object"
+            fields:
+              - {label: "封面图", name: "cover", widget: "image"}
+              - {label: "说明文字", name: "note", widget: "string"}
+          - label: "下载区"
+            name: "download"
+            widget: "object"
+            fields:
+              - {label: "下载链接（留空表示未开放）", name: "link", widget: "string", required: false}
+              - {label: "说明文字", name: "note", widget: "text"}
