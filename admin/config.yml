@@ -1,10 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: csoccl/csocc-site
   branch: main
-  site_domain: csocc-site.netlify.app
-  accept_roles:
-    - admin
-    - editor
 
 media_folder: "uploads"
 public_folder: "/uploads"
