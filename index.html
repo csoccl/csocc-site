@@ -255,7 +255,7 @@
     <span class="brand-mark" aria-hidden="true">
       <svg viewBox="0 0 26 26" width="26" height="26"><circle cx="13" cy="13" r="8.5" fill="none" stroke="#E8753A" stroke-width="2.6"/><circle cx="13" cy="13" r="2.1" fill="#E8753A"/></svg>
     </span>
-    CSOcc社区
+    <span id="brand-name">CSOcc社区</span>
   </a>
   <nav aria-label="主导航">
     <ul class="nav-links">
@@ -273,16 +273,18 @@
   <section class="hero" id="home">
     <div class="hero-inner">
       <span class="hero-eyebrow">GAME OFFICIAL SITE</span>
-      <h1>CSOcc社区</h1>
-      <p class="hero-sub">欢迎来到 CSOcc 社区。这里收录游戏的介绍、宣传视频、版本更新与下载入口，让你第一时间了解这款游戏的一切。</p>
+      <h1 id="hero-title">CSOcc社区</h1>
+      <p class="hero-sub" id="hero-sub">欢迎来到 CSOcc 社区。这里收录游戏的介绍、宣传视频、版本更新与下载入口，让你第一时间了解这款游戏的一切。</p>
       <div class="hero-actions">
-        <button class="btn btn-primary" id="btn-download-hero">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
-          下载游戏
-        </button>
+        <span id="hero-download-slot">
+          <button class="btn btn-primary" id="btn-download-hero">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+            下载游戏
+          </button>
+        </span>
         <a class="btn btn-ghost" href="#updates">查看更新</a>
       </div>
-      <p class="hero-hint">下载链接整理中，确认后第一时间放出。</p>
+      <p class="hero-hint" id="hero-hint">下载链接整理中，确认后第一时间放出。</p>
     </div>
   </section>
 
@@ -293,8 +295,8 @@
         <h2 class="section-title">关于社区</h2>
       </div>
       <div class="intro-body">
-        <p>CSOcc 社区是一个属于玩家的游戏社区。官方网站会持续同步最新版本、宣传视频与下载资源，让每一位玩家都能第一时间找到想要的东西。</p>
-        <p>版本动态、影像资料和下载通道都会陆续在这里更新，欢迎常回来看看。</p>
+        <p id="about-p1">CSOcc 社区是一个属于玩家的游戏社区。官方网站会持续同步最新版本、宣传视频与下载资源，让每一位玩家都能第一时间找到想要的东西。</p>
+        <p id="about-p2">版本动态、影像资料和下载通道都会陆续在这里更新，欢迎常回来看看。</p>
       </div>
     </div>
   </section>
@@ -307,16 +309,7 @@
         <p class="section-desc">每个版本的变动都会记录在这里。</p>
       </div>
 
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-time">筹备中</div>
-          <div class="tl-axis"><span class="tl-dot"></span></div>
-          <div class="tl-card">
-            <div class="tl-title">首个版本 <span class="tl-tag">进行中</span></div>
-            <p class="tl-text">版本信息会在上线后第一时间整理发布，请保持关注。</p>
-          </div>
-        </div>
-      </div>
+      <div class="timeline" id="updates-list"></div>
       <p class="tl-note">更新日志将在版本发布后逐条补充，本页内容会随之保持最新。</p>
     </div>
   </section>
@@ -329,14 +322,14 @@
         <p class="section-desc">用影像认识 CSOcc 社区。</p>
       </div>
       <div class="video-frame">
-        <img src="video-cover.jpg" alt="CSOcc社区宣传视频封面">
+        <img id="video-cover" src="video-cover.jpg" alt="CSOcc社区宣传视频封面">
         <button class="btn-play" id="btn-play" aria-label="播放宣传视频">
           <svg viewBox="0 0 24 24" fill="#F2F5F8" aria-hidden="true"><path d="M7 4.6v14.8c0 .8.9 1.3 1.6.9l11.7-7.4c.7-.4.7-1.4 0-1.8L8.6 3.7c-.7-.4-1.6.1-1.6.9z"/></svg>
         </button>
       </div>
-      <p class="video-note">
+      <p class="video-note" id="video-note">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        宣传片制作中，完成后会在这里放出。
+        <span id="video-note-text">宣传片制作中，完成后会在这里放出。</span>
       </p>
     </div>
   </section>
@@ -347,13 +340,13 @@
       <div class="dl-panel">
         <div class="dl-info">
           <h3>下载游戏</h3>
-          <p>下载链接正在准备中，确认文件安全与稳定后，会第一时间在这里放出最新版本。</p>
-          <span class="dl-status">
+          <p id="download-note">下载链接正在准备中，确认文件安全与稳定后，会第一时间在这里放出最新版本。</p>
+          <span class="dl-status" id="download-status">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             下载通道整理中
           </span>
         </div>
-        <div class="dl-action">
+        <div class="dl-action" id="download-slot">
           <button class="btn btn-primary btn-download" id="btn-download-main">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
             下载游戏
@@ -365,13 +358,31 @@
 </main>
 
 <footer class="footer">
-  <p><span class="f-brand">CSOcc社区</span> · 玩家社区官网 · © 2026</p>
+  <p><span class="f-brand" id="footer-brand">CSOcc社区</span> · 玩家社区官网 · © 2026</p>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function () {
+  // 默认内容（本地直接打开、或线上数据加载失败时使用）
+  var DEFAULT_DATA = {
+    hero: {
+      title: "CSOcc社区",
+      subtitle: "欢迎来到 CSOcc 社区。这里收录游戏的介绍、宣传视频、版本更新与下载入口，让你第一时间了解这款游戏的一切。",
+      hint: "下载链接整理中，确认后第一时间放出。"
+    },
+    about: {
+      p1: "CSOcc 社区是一个属于玩家的游戏社区。官方网站会持续同步最新版本、宣传视频与下载资源，让每一位玩家都能第一时间找到想要的东西。",
+      p2: "版本动态、影像资料和下载通道都会陆续在这里更新，欢迎常回来看看。"
+    },
+    updates: [
+      { date: "筹备中", title: "首个版本", tag: "进行中", text: "版本信息会在上线后第一时间整理发布，请保持关注。" }
+    ],
+    video: { cover: "video-cover.jpg", note: "宣传片制作中，完成后会在这里放出。" },
+    download: { link: "", note: "下载链接正在准备中，确认文件安全与稳定后，会第一时间在这里放出最新版本。" }
+  };
+
   var toastEl = document.getElementById('toast');
   var toastTimer = null;
 
@@ -384,13 +395,121 @@
     }, 2600);
   }
 
-  var pendingText = '下载链接准备中，确认后会第一时间放上，敬请期待。';
-  document.getElementById('btn-download-hero').addEventListener('click', function () {
-    showToast(pendingText);
-  });
-  document.getElementById('btn-download-main').addEventListener('click', function () {
-    showToast(pendingText);
-  });
+  function setText(id, value) {
+    var el = document.getElementById(id);
+    if (el && value) { el.textContent = value; }
+  }
+
+  // 下载按钮渲染：有链接变真实跳转，没有则保持占位提示
+  function renderDownload(link) {
+    var heroSlot = document.getElementById('hero-download-slot');
+    var mainSlot = document.getElementById('download-slot');
+    var statusEl = document.getElementById('download-status');
+    var pending = '下载链接准备中，确认后会第一时间放上，敬请期待。';
+
+    if (link) {
+      var heroBtn = document.createElement('a');
+      heroBtn.className = 'btn btn-primary';
+      heroBtn.href = link;
+      heroBtn.setAttribute('target', '_blank');
+      heroBtn.setAttribute('rel', 'noopener');
+      heroBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>下载游戏';
+      heroSlot.replaceChildren(heroBtn);
+
+      var mainBtn = document.createElement('a');
+      mainBtn.className = 'btn btn-primary btn-download';
+      mainBtn.href = link;
+      mainBtn.setAttribute('target', '_blank');
+      mainBtn.setAttribute('rel', 'noopener');
+      mainBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>下载游戏';
+      mainSlot.replaceChildren(mainBtn);
+      if (statusEl) { statusEl.textContent = '下载通道已开放'; }
+    } else {
+      heroSlot.querySelector('button').addEventListener('click', function () {
+        showToast(pending);
+      });
+      mainSlot.querySelector('button').addEventListener('click', function () {
+        showToast(pending);
+      });
+    }
+  }
+
+  // 更新日志时间轴渲染
+  function renderUpdates(list) {
+    var container = document.getElementById('updates-list');
+    container.innerHTML = '';
+    if (!list || !list.length) {
+      var empty = document.createElement('p');
+      empty.className = 'tl-text';
+      empty.textContent = '暂无更新记录';
+      container.appendChild(empty);
+      return;
+    }
+    list.forEach(function (u) {
+      var item = document.createElement('div');
+      item.className = 'tl-item';
+
+      var time = document.createElement('div');
+      time.className = 'tl-time';
+      time.textContent = u.date || '';
+
+      var axis = document.createElement('div');
+      axis.className = 'tl-axis';
+      var dot = document.createElement('span');
+      dot.className = 'tl-dot';
+      axis.appendChild(dot);
+
+      var card = document.createElement('div');
+      card.className = 'tl-card';
+      var title = document.createElement('div');
+      title.className = 'tl-title';
+      title.textContent = u.title || '';
+      if (u.tag) {
+        var tag = document.createElement('span');
+        tag.className = 'tl-tag';
+        tag.textContent = u.tag;
+        title.appendChild(tag);
+      }
+      var text = document.createElement('p');
+      text.className = 'tl-text';
+      text.textContent = u.text || '';
+      card.appendChild(title);
+      card.appendChild(text);
+
+      item.appendChild(time);
+      item.appendChild(axis);
+      item.appendChild(card);
+      container.appendChild(item);
+    });
+  }
+
+  function render(data) {
+    setText('brand-name', data.hero.title);
+    setText('footer-brand', data.hero.title);
+    document.title = data.hero.title + ' · 游戏官网';
+    setText('hero-title', data.hero.title);
+    setText('hero-sub', data.hero.subtitle);
+    setText('hero-hint', data.hero.hint);
+    setText('about-p1', data.about.p1);
+    setText('about-p2', data.about.p2);
+    setText('video-note-text', data.video.note);
+    setText('download-note', data.download.note);
+    var cover = document.getElementById('video-cover');
+    if (data.video.cover) { cover.src = data.video.cover; }
+    renderUpdates(data.updates);
+    renderDownload(data.download.link || '');
+  }
+
+  // 先渲染默认内容（保证本地和离线可用），再尝试加载数据文件
+  render(DEFAULT_DATA);
+
+  fetch('content.json', { cache: 'no-store' })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data && data.hero) { render(data); }
+    })
+    .catch(function () { /* 加载失败时保持默认内容 */ });
+
   document.getElementById('btn-play').addEventListener('click', function () {
     showToast('宣传视频制作中，上线后会第一时间放出。');
   });
